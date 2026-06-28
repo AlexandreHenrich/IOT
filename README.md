@@ -1,7 +1,7 @@
 # IOT
 # Sistema de Monitoramento de Dispositivos IoT
 
-Este é um projeto acadêmico desenvolvido para a disciplina de [Nome da Disciplina], com o objetivo de criar um sistema de gerenciamento e monitoramento de dispositivos IoT simulados utilizando Python e MySQL.
+Este é um projeto acadêmico desenvolvido para a disciplina de Desenvolvimento de sistemas, com o objetivo de criar um sistema de gerenciamento e monitoramento de dispositivos IoT simulados utilizando Python e MySQL.
 
 ## 🚀 Funcionalidades
 - **Cadastro de Dispositivos:** Adição, edição e remoção de sensores no sistema.
@@ -43,4 +43,4 @@ Este é um projeto acadêmico desenvolvido para a disciplina de [Nome da Discipl
 - `README.md`: Este arquivo de documentação.
 
 ---
-Desenvolvido por: [Seu Nome]
+Desenvolvido por: Alexandre Heneich Rodrigues Soares
