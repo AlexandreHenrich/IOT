@@ -1,0 +1,33 @@
+-- Cria o banco de dados
+CREATE DATABASE TrabalhoIoT;
+USE TrabalhoIoT;
+
+-- Tabela de dispositivos
+CREATE TABLE Dispositivos (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL,
+    Tipo VARCHAR(50),
+    Localizacao VARCHAR(100),
+    DataInstalacao DATE,
+    Status VARCHAR(20)
+);
+
+-- Tabela das leituras dos sensores
+CREATE TABLE Leituras (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    DispositivoId INT,
+    DataHora DATETIME,
+    Valor DECIMAL(10,2),
+    FOREIGN KEY (DispositivoId) REFERENCES Dispositivos(Id) ON DELETE CASCADE
+);
+
+-- Inserindo uns dados iniciais pra não ficar vazio
+INSERT INTO Dispositivos (Nome, Tipo, Localizacao, DataInstalacao, Status)
+VALUES 
+('Sensor Temp 1', 'Sensor de Temperatura', 'Sala de Reunião', '2023-10-01', 'Ativo'),
+('Umid-01', 'Sensor de Umidade', 'Estufa', '2023-11-15', 'Ativo');
+
+INSERT INTO Leituras (DispositivoId, DataHora, Valor)
+VALUES 
+(1, '2024-05-01 10:00:00', 24.5),
+(2, '2024-05-02 14:30:00', 65.0);
